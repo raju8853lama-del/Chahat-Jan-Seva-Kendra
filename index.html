@@ -76,6 +76,7 @@ input[type=range]{width:100%;accent-color:var(--blue)}
 .a4-preview{width:100%;aspect-ratio:210/297;max-height:620px;background:white;border:1px solid #cbd5e1;border-radius:4px;box-shadow:0 7px 25px #152d5518;position:relative;overflow:hidden}
 .a4-label{position:absolute;top:4%;width:100%;text-align:center;color:#8995a8;font-size:10px}
 /* 1. स्क्रीन पर A4 का सही बॉक्स और फ्री-ड्रैग सेटिंग्स */
+/* 1. आधार कार्ड का सही माप (8.5cm x 5.5cm) और फ्री-रिसाइज */
 .card-slot {
     width: 8.5cm !important;
     height: 5.5cm !important;
@@ -90,21 +91,21 @@ input[type=range]{width:100%;accent-color:var(--blue)}
     object-fit: fill !important;
 }
 
-/* स्क्रीन प्रीव्यू पर A4 जैसा बड़ा बॉक्स और कार्डों को अगल-बगल (Left-Right) सेट करना */
+/* 2. स्क्रीन प्रीव्यू पर A4 शीट का पूरा बॉक्स और दोनों कार्डों को अगल-बगल (Left-Right) सेट करना */
 .a4-preview, #printArea, .print-layout {
     width: 210mm !important;
     min-height: 297mm !important;
     box-sizing: border-box !important;
     display: flex !important;
-    flex-direction: row !important; /* अगल-बगल लाने के लिए */
+    flex-direction: row !important;
     justify-content: flex-start !important;
     align-items: flex-start !important;
-    gap: 12mm !important;
+    gap: 10mm !important;
     padding: 10mm !important;
     background: #ffffff !important;
 }
 
-/* 2. प्रिंट की सही सेटिंग - सिर्फ 1 सिंगल A4 पेज (फोटोकॉपी स्टाइल) */
+/* 3. प्रिंट सेटिंग: सिर्फ 1 सिंगल A4 पेज और ऊपर फोटोकॉपी जैसा लेआउट */
 @media print {
     @page {
         size: A4 portrait;
@@ -124,10 +125,10 @@ input[type=range]{width:100%;accent-color:var(--blue)}
         width: 210mm !important;
         height: 297mm !important;
         display: flex !important;
-        flex-direction: row !important; /* अगल-बगल */
+        flex-direction: row !important;
         justify-content: flex-start !important;
         align-items: flex-start !important;
-        gap: 12mm !important;
+        gap: 10mm !important;
         padding: 10mm !important;
         page-break-after: avoid !important;
         page-break-before: avoid !important;
