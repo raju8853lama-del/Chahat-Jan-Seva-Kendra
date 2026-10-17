@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>चाहत जनसेवा केंद्र | फोटो, डॉक्यूमेंट और प्रिंट टूल</title>
+<meta name="description" content="चाहत जनसेवा केंद्र: फोटो 50KB, JPG डॉक्यूमेंट 100KB, NSDL PAN फोटो 2.5x3.5 cm, सिग्नेचर 4.5x2 cm, PDF 300KB और आधार कार्ड A4 प्रिंट टूल।">
+<meta name="keywords" content="राजू जनसेवा केंद्र, चाहत जनसेवा केंद्र, फोटो रिसाइजर, Easy Photo Resizer, 100 KB Photo Resizer, NSDL Photo Resizer, PAN Card Photo Resize, आधार कार्ड प्रिंट, PVC Aadhaar Card, ई-श्रम कार्ड, श्रमिक कार्ड, आय जाति निवास, JPG 100KB, PDF 300KB, राशन कार्ड फोटो साइज">
+<meta name="author" content="चाहत जनसेवा केंद्र">
+<meta property="og:site_name" content="चाहत जनसेवा केंद्र">
+<meta property="og:title" content="चाहत जनसेवा केंद्र — फोटो और डॉक्यूमेंट टूल">
+<meta property="og:description" content="फोटो क्रॉप, PAN फोटो-सिग्नेचर साइज, डॉक्यूमेंट KB, आधार A4 प्रिंट और जनसेवा सेवाएँ।">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css">
+
+<style>
+:root{--ink:#12233e;--muted:#66758b;--blue:#225de6;--blue2:#123eab;--teal:#0b9b83;--bg:#f3f6fc;--line:#e0e7f2;--white:#fff;--orange:#ffb545}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Devanagari",Arial,sans-serif}
+header{background:radial-gradient(circle at 85% 10%,#3679ff 0,transparent 30%),linear-gradient(120deg,#101d46,#174db4);color:white;padding:20px max(16px,calc((100% - 1120px)/2));display:flex;align-items:center;gap:14px}
+.logo{width:68px;height:68px;flex:0 0 68px;filter:drop-shadow(0 8px 10px #07133880)}
+.brand h1{font-size:clamp(21px,4vw,30px);line-height:1.2;margin:0}
+.brand p{margin:5px 0 0;color:#dce8ff;font-size:13px}
+nav{position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;gap:6px;overflow-x:auto;padding:9px max(12px,calc((100% - 1120px)/2))}
+nav a{white-space:nowrap;text-decoration:none;color:#203b72;font-size:13px;font-weight:750;padding:9px 12px;border-radius:10px}
+nav a:hover{background:#eaf0ff}
+main{max-width:1120px;margin:20px auto;padding:0 14px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(125deg,#fff,#eef4ff);border:1px solid #dce6fb;border-radius:24px;padding:25px;display:grid;grid-template-columns:1.35fr .65fr;gap:18px;align-items:center;box-shadow:0 12px 35px #1e3d7710}
+.hero h2{font-size:clamp(25px,4vw,38px);letter-spacing:-.5px;line-height:1.18;margin:0 0 10px}
+.hero p{color:var(--muted);line-height:1.6;margin:0 0 18px}
+.hero-art{display:flex;align-items:center;justify-content:center;min-height:140px}
+.hero-art svg{width:min(100%,260px);height:auto}
+.btn{border:0;border-radius:11px;background:var(--blue);color:white;text-decoration:none;padding:11px 15px;font-weight:750;display:inline-flex;align-items:center;justify-content:center;gap:7px;cursor:pointer;font-size:14px;box-shadow:0 5px 12px #225de622}
+.btn:hover{filter:brightness(.96);transform:translateY(-1px)}
+.btn.green{background:var(--teal);box-shadow:0 5px 12px #0b9b8322}
+.btn.soft{background:#eaf0ff;color:#1d3f94;box-shadow:none}
+.btn.gold{background:#ffca70;color:#3b2600;box-shadow:none}
+.btn-row{display:flex;flex-wrap:wrap;gap:8px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:28px 2px 13px}
+.section-head h2{font-size:22px;margin:0;letter-spacing:-.2px}
+.section-head p{font-size:12px;color:var(--muted);margin:4px 0 0}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.card,.panel{background:white;border:1px solid var(--line);border-radius:17px;padding:16px;box-shadow:0 7px 24px #142d5710}
+.card .ico{width:42px;height:42px;display:grid;place-items:center;background:linear-gradient(135deg,#edf2ff,#dce7ff);border-radius:13px;font-size:23px}
+.card h3{font-size:15px;margin:10px 0 5px}
+.card p{font-size:12px;color:var(--muted);line-height:1.45;min-height:32px;margin:0 0 11px}
+.price{font-size:18px;font-weight:850;margin-bottom:10px}
+.card .btn{width:100%;font-size:12px;padding:10px 6px}
+.workspace{background:linear-gradient(145deg,#eaf1ff,#f8faff);border:1px solid #d7e2fa;border-radius:22px;padding:14px}
+.tabs{display:flex;gap:7px;overflow-x:auto;margin-bottom:12px}
+.tab{border:1px solid #d5e0f5;background:white;border-radius:11px;padding:10px 13px;font-size:13px;font-weight:800;color:#34507f;white-space:nowrap;cursor:pointer}
+.tab.active{background:#1d50cf;color:#fff;border-color:#1d50cf}
+.toolpane{display:none}
+.toolpane.active{display:block}
+.tool-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:13px}
+.panel h3{font-size:16px;margin:0 0 12px}
+.label{font-size:12px;font-weight:800;display:block;margin:11px 0 5px}
+.input,input[type=file],input[type=number],select{width:100%;min-width:0;border:1px solid #d4deee;background:#fff;border-radius:10px;padding:10px;color:var(--ink);font:inherit;font-size:13px}
+input[type=range]{width:100%;accent-color:var(--blue)}
+.preset-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.preset{border:1px solid #dbe4f3;background:#f8faff;border-radius:10px;padding:9px 8px;text-align:left;font-size:12px;color:#2c4779;font-weight:800;cursor:pointer}
+.preset small{display:block;font-weight:600;color:#71809a;margin-top:3px}
+.preset.active{border-color:#285ce0;background:#eaf0ff;color:#1b45ad}
+.fields2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.crop-stage{height:340px;background:#f0f4fb;border:1px dashed #c4d1e6;border-radius:13px;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:8px}
+.crop-stage img{display:block;max-width:100%;max-height:100%}
+.empty{color:#7a8ba6;font-size:13px;text-align:center;padding:20px}
+.status{font-size:12px;line-height:1.5;margin-top:10px;white-space:pre-wrap;color:var(--muted)}
+.status.good{color:#087d5e}
+.status.bad{color:#b42318}
+.mini-note{font-size:11px;color:var(--muted);line-height:1.5;margin:9px 0 0}
+.output{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:10px}
+.output a[hidden]{display:none}
+.print-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:13px}
+.a4-preview{width:100%;aspect-ratio:210/297;max-height:620px;background:white;border:1px solid #cbd5e1;border-radius:4px;box-shadow:0 7px 25px #152d5518;position:relative;overflow:hidden}
+.a4-label{position:absolute;top:4%;width:100%;text-align:center;color:#8995a8;font-size:10px}
+.card-slot{position:absolute;width:40.76%;height:18.18%;border:1px dashed #b3bfd0;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#7f8da2;font-size:11px;text-align:center}
+.card-slot img{width:100%;height:100%;object-fit:fill}
+.card-slot[hidden],.print-single[hidden]{display:none!important}
+.card-slot.front{left:7.14%;top:9%}
+.card-slot.back{left:52.38%;top:9%}
+.print-single{position:absolute;inset:8% 7%;display:flex;align-items:center;justify-content:center}
+.print-single img{max-width:100%;max-height:100%;object-fit:contain}
+.contact{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;background:linear-gradient(120deg,#11234e,#174bb2);color:white;border-radius:20px;padding:22px}
+.contact h2{margin:0 0 5px}
+.contact p{margin:0;color:#dce7ff;font-size:13px}
+footer{text-align:center;color:#74819a;font-size:11px;padding:22px 12px 30px}
+
+/* Two-screen swipe layout */
+.page-shell{width:100%;overflow:hidden;position:relative;touch-action:pan-y;overflow-x:clip}
+.page-track{width:200%;display:flex;align-items:flex-start;transition:transform .38s cubic-bezier(.2,.8,.2,1);will-change:transform;transform:translateX(0)}
+.page-track.show-services{transform:translateX(-50%)}
+.site-page{width:50%;min-width:0;flex:0 0 50%;max-width:50%;padding:0 0 8px}
+.basic-crop-wrap{position:relative;width:100%;height:100%;min-height:220px;display:flex;align-items:center;justify-content:center;overflow:hidden;touch-action:none;cursor:crosshair;background:#f0f4fb}
+.basic-crop-wrap img{max-width:100%!important;max-height:100%!important;width:auto!important;height:auto!important;object-fit:contain}
+.basic-crop-selection{position:absolute;border:2px solid #1d50cf;background:#225de61a;box-shadow:0 0 0 9999px #13254b30;pointer-events:none;z-index:2}
+.basic-crop-wrap .cropper-container{display:none}
+.home-page .hero{margin-bottom:18px}
+.services-page{min-height:60vh}
+.services-page .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.services-page .card{position:relative;overflow:hidden;background:linear-gradient(155deg,#fff 55%,#edf3ff)}
+.services-page .card:before{content:"";position:absolute;right:-18px;top:-22px;width:70px;height:70px;border-radius:22px;background:linear-gradient(135deg,#dbe8ff,#eff4ff);transform:rotate(20deg)}
+.services-page .card .ico{position:relative;box-shadow:0 5px 14px #225de61a}
+.page-indicator{display:flex;justify-content:center;gap:6px;margin:0 auto 12px}
+.page-indicator span{width:7px;height:7px;border-radius:99px;background:#c6d2e8}
+.page-indicator span.active{width:22px;background:#225de6}
+.section-head .back-home{border:0;background:#eaf0ff;color:#2145a0;border-radius:10px;padding:9px 11px;font-weight:800;cursor:pointer}
+@media(max-width:780px){
+.services-page .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.hero{grid-template-columns:1fr;padding:20px}
+.hero-art{display:none}
+.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.tool-grid,.print-layout{grid-template-columns:1fr}
+.crop-stage{height:300px}
+.section-head h2{font-size:20px}
+}
+@media(max-width:420px){
+header{padding-top:15px;padding-bottom:15px}
+.logo{width:56px;height:56px;flex-basis:56px}
+.brand p{font-size:11px}
+.hero{padding:17px}
+.card{padding:11px}
+.card p{min-height:0}
+.workspace{padding:8px}
+.panel{padding:13px}
+.btn{font-size:13px;padding:10px 12px}
+.section-head{margin-top:23px}
+}
+@media print{
+@page{size:A4 portrait;margin:0}
+body *{visibility:hidden!important}
+#printArea,#printArea *{visibility:visible!important}
+#printArea{position:fixed!important;left:0!important;top:0!important;width:210mm!important;height:297mm!important;max-height:none!important;border:0!important;box-shadow:none!important;border-radius:0!important;overflow:hidden!important;background:white!important}
+#printArea .a4-label{display:none!important}
+#printArea .card-slot{border:0!important;width:85.6mm!important;height:54mm!important;max-width:none!important;max-height:none!important}
+#printArea .card-slot.front{left:15mm!important;top:20mm!important}
+#printArea .card-slot.back{left:110mm!important;top:20mm!important}
+#printArea .print-single{inset:0!important}
+#printArea .print-single img{width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain!important}
+nav,header,footer{display:none!important}
+}
+</style>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"चाहत जनसेवा केंद्र","telephone":"+91-8853846340","email":"RAJU8853LAMA@gmail.com","description":"फोटो रिसाइजर, आधार A4 प्रिंट, PAN फोटो-सिग्नेचर और जनसेवा केंद्र की ऑनलाइन सहायता सेवाएँ"}
+</script>
+</head>
+<body>
+
+<header>
+<svg class="logo" viewBox="0 0 100 100" role="img" aria-label="CR लोगो">
+<defs>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+<stop stop-color="#fff0b0"/><stop offset=".48" stop-color="#ffc04c"/><stop offset="1" stop-color="#d77a08"/>
+</linearGradient>
+<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+<stop stop-color="#74a5ff"/><stop offset="1" stop-color="#123eab"/>
+</linearGradient>
+</defs>
+<path d="M50 3 92 27v46L50 97 8 73V27Z" fill="#06183c" stroke="#ffdb84" stroke-width="3"/>
+<path d="M50 9 86 30v40L50 91 14 70V30Z" fill="url(#glass)" stroke="#ffffff" stroke-opacity=".8" stroke-width="1.5"/>
+<path d="M64 33c-5-7-20-8-27 0-8 9-7 28 1 35 7 6 19 5 26-2" fill="none" stroke="url(#gold)" stroke-width="8" stroke-linecap="round"/>
+<path d="M41 53h14l12 19" fill="none" stroke="url(#gold)" stroke-width="7" stroke-linecap="round"/>
+<path d="M35 20h29" stroke="#fff" stroke-opacity=".65" stroke-width="2" stroke-linecap="round"/>
+</svg>
+<div class="brand">
+<h1>चाहत जनसेवा केंद्र</h1>
+<p>फोटो • डॉक्यूमेंट • ऑनलाइन सेवा</p>
+</div>
+</header>
+
+<nav>
+<a href="#home" data-page="home">✂️ क्रॉप / प्रिंट</a>
+<a href="#services" data-page="services">हमारी सेवाएँ →</a>
+<a target="_blank" rel="noopener" href="https://wa.me/918853846340?text=नमस्ते%2C%20मुझे%20चाहत%20जनसेवा%20केंद्र%20से%20बात%20करनी%20है।">WhatsApp</a>
+</nav>
+<div class="page-indicator" aria-hidden="true"><span id="dotHome" class="active"></span><span id="dotServices"></span></div>
+
+<main>
+<div class="page-shell" id="pageShell">
+<div class="page-track" id="pageTrack">
+<div class="site-page home-page" id="homePage">
+
+<section class="hero">
+<div>
+<h2>साइज बनाओ। क्रॉप करो।<br>तुरंत डाउनलोड करो।</h2>
+<p>फोटो क्रॉप, KB साइज, चमक-कॉन्ट्रास्ट और A4 प्रिंट — सभी रोज़मर्रा के टूल एक जगह।</p>
+<div class="btn-row"><a class="btn" href="#tools">⚡ टूल खोलें</a></div>
+</div>
+<div class="hero-art">
+<svg viewBox="0 0 280 180" aria-label="फोटो और डॉक्यूमेंट टूल का चित्र">
+<defs><linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#dbe7ff"/></linearGradient></defs>
+<rect x="38" y="20" width="112" height="140" rx="12" fill="url(#paper)" stroke="#c6d6f6" stroke-width="2" transform="rotate(-8 94 90)"/>
+<rect x="63" y="44" width="63" height="48" rx="7" fill="#d7e5ff" transform="rotate(-8 94 90)"/>
+<circle cx="94" cy="61" r="11" fill="#4d7de2"/>
+<path d="M76 84q18-27 36 0" fill="#4d7de2"/>
+<path d="M71 111h52M71 122h40M71 133h48" stroke="#9db3df" stroke-width="5" stroke-linecap="round" transform="rotate(-8 94 90)"/>
+<rect x="140" y="47" width="104" height="80" rx="12" fill="#174db4" transform="rotate(8 192 87)"/>
+<rect x="154" y="61" width="76" height="51" rx="6" fill="#fff" transform="rotate(8 192 87)"/>
+<path d="M166 91q12-25 23 0t23-2" fill="none" stroke="#0b9b83" stroke-width="4" stroke-linecap="round"/>
+<circle cx="219" cy="55" r="18" fill="#0b9b83" stroke="#fff" stroke-width="4"/>
+<path d="m211 55 6 6 11-13" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>
+</section>
+
+<section id="tools">
+<div class="section-head"><div><h2>फोटो / डॉक्यूमेंट टूल</h2><p>तैयार साइज चुनें या अपनी जरूरत मैनुअली भरें</p></div></div>
+
+<div class="workspace">
+<div class="tabs">
+<button class="tab active" data-tab="resizePane">✂️ फोटो / JPG</button>
+<button class="tab" data-tab="printPane">🪪 आधार / A4 प्रिंट</button>
+<button class="tab" data-tab="pdfPane">📄 PDF 300KB</button>
+</div>
+
+<div class="toolpane active" id="resizePane">
+<div class="tool-grid">
+<div class="panel">
+<h3>1. साइज चुनें</h3>
+<div class="preset-grid">
+<button class="preset active" data-preset="photo">फोटो 50 KB<small>आय / जाति / निवास</small></button>
+<button class="preset" data-preset="document">डॉक्यूमेंट 100 KB<small>आधार / घोषणा पत्र</small></button>
+<button class="preset" data-preset="panphoto">PAN फोटो<small>2.5 × 3.5 cm</small></button>
+<button class="preset" data-preset="signature">PAN सिग्नेचर<small>4.5 × 2 cm</small></button>
+<button class="preset" data-preset="ration">राशन कार्ड<small>KB खुद बदलें</small></button>
+<button class="preset" data-preset="manual">मैनुअल साइज<small>अपनी सेटिंग</small></button>
+</div>
+
+<label class="label" for="imageFile">2. फोटो / डॉक्यूमेंट चुनें</label>
+<input type="file" id="imageFile" accept="image/*">
+<div class="fields2">
+<div><label class="label" for="targetKb">KB लक्ष्य</label><input type="number" id="targetKb" value="50" min="1" max="10000"></div>
+<div><label class="label" for="quality">क्वालिटी <span id="qualityValue">85%</span></label><input type="range" id="quality" min="15" max="100" value="85"></div>
+</div>
+<div class="fields2">
+<div><label class="label" for="brightness">चमक <span id="brightnessValue">100%</span></label><input type="range" id="brightness" min="50" max="160" value="100"></div>
+<div><label class="label" for="contrast">कॉन्ट्रास्ट <span id="contrastValue">100%</span></label><input type="range" id="contrast" min="50" max="160" value="100"></div>
+</div>
+<label class="label">क्रॉप का आकार (cm) — जरूरत हो तो बदलें</label>
+<div class="fields2">
+<div><input type="number" id="cropW" value="2.5" min="0.1" max="30" step="0.1" aria-label="चौड़ाई cm"></div>
+<div><input type="number" id="cropH" value="3.5" min="0.1" max="30" step="0.1" aria-label="ऊँचाई cm"></div>
+</div>
+<div class="btn-row" style="margin-top:9px"><button class="btn soft" id="freeCrop">फ्री क्रॉप</button><button class="btn soft" id="applyRatio">साइज लॉक</button></div>
+<div class="btn-row" style="margin-top:12px"><button class="btn" id="makeImage">✂️ क्रॉप + JPG बनाएं</button></div>
+<div id="imageStatus" class="status"></div>
+<div class="output"><a id="imageDownload" class="btn green" hidden download="chaahat-photo.jpg">⬇ JPG डाउनलोड</a></div>
+<p class="mini-note">राशन कार्ड/पोर्टल की KB सीमा अलग हो सकती है — ऊपर KB मैनुअली बदल दें।</p>
+</div>
+
+<div class="panel">
+<h3>3. क्रॉप करें</h3>
+<div class="crop-stage" id="cropStage">
+<div class="empty" id="cropEmpty">पहले फोटो या डॉक्यूमेंट चुनें।<br><br>फिर बॉक्स खींचकर क्रॉप सेट करें।</div>
+<img id="cropImage" alt="मैनुअल क्रॉप इमेज" hidden>
+</div>
+<div class="btn-row" style="margin-top:10px">
+<button class="btn soft" id="rotateLeft">↶ घुमाएँ</button>
+<button class="btn soft" id="rotateRight">↷ घुमाएँ</button>
+<button class="btn soft" id="resetCrop">रीसेट</button>
+</div>
+<label class="label" for="cropAngle">एंगल <span id="cropAngleValue">0°</span></label>
+<input type="range" id="cropAngle" min="-180" max="180" value="0">
+<p class="mini-note">टच/माउस से क्रॉप बॉक्स खींचें। चाहें तो चौड़ाई, ऊँचाई और KB खुद लिखें।</p>
+</div>
+</div>
+</div>
+
+<div class="toolpane" id="printPane">
+<div class="print-layout">
+<div class="panel">
+<h3>आधार / WhatsApp इमेज</h3>
+<label class="label" for="printMode">प्रिंट का प्रकार</label>
+<select id="printMode">
+<option value="card">आधार कार्ड — असली कार्ड साइज</option>
+<option value="a4">पूरी A4 शीट पर डॉक्यूमेंट</option>
+</select>
+<label class="label" for="frontFile">फ्रंट / पहली इमेज</label>
+<input id="frontFile" type="file" accept="image/*">
+<label class="label" for="backFile">बैक / दूसरी इमेज (वैकल्पिक)</label>
+<input id="backFile" type="file" accept="image/*">
+<p class="mini-note">इमेज चुनकर क्रॉप बॉक्स सेट करें, फिर फ्रंट/बैक क्रॉप बटन दबाएँ।</p>
+<div class="btn-row" style="margin-top:10px"><button class="btn soft" id="loadFront">फ्रंट क्रॉप खोलें</button><button class="btn soft" id="loadBack">बैक क्रॉप खोलें</button></div>
+<div class="btn-row" style="margin-top:9px"><button class="btn" id="cropFront">फ्रंट लागू</button><button class="btn" id="cropBack">बैक लागू</button></div>
+<div class="btn-row" id="printActions" style="margin-top:12px" hidden>
+<button class="btn green" id="printBtn">🖨️ एक क्लिक प्रिंट</button>
+<button class="btn" id="downloadCardsPdf">PDF डाउनलोड</button>
+<button class="btn soft" id="downloadCardsJpg">JPG डाउनलोड</button>
+<button class="btn soft" id="downloadCardsPng">PNG डाउनलोड</button>
+<button class="btn soft" id="clearCards">रीसेट</button>
+</div>
+<div id="cropStatus" class="status">फ्रंट या बैक इमेज चुनें।</div>
+</div>
+
+<div class="panel">
+<h3>A4 प्रीव्यू</h3>
+<div class="a4-preview" id="printArea">
+<div class="a4-label">A4 SHEET • PRINT PREVIEW</div>
+<div class="card-slot front" id="frontSlot">फ्रंट</div>
+<div class="card-slot back" id="backSlot">बैक</div>
+<div class="print-single" id="singleSlot" hidden></div>
+</div>
+<p class="mini-note">कार्ड साइज: 85.6 × 54 mm • प्रिंट में 100% / Actual size चुनें।</p>
+</div>
+</div>
+
+<div class="crop-stage" style="margin-top:12px">
+<div class="empty" id="printCropEmpty">क्रॉप करने के लिए इमेज खोलें।</div>
+<img id="printCropImage" alt="आधार क्रॉप" hidden>
+</div>
+<div class="btn-row" style="margin-top:10px"><button class="btn soft" id="printRotateLeft">↶ घुमाएँ</button><button class="btn soft" id="printRotateRight">↷ घुमाएँ</button></div>
+<label class="label" for="printAngle">एंगल <span id="printAngleValue">0°</span></label>
+<input type="range" id="printAngle" min="-180" max="180" value="0">
+<div class="fields2" style="margin-top:10px">
+<div><label class="label" for="printBrightness">चमक <span id="printBrightnessValue">100%</span></label><input type="range" id="printBrightness" min="50" max="160" value="100"></div>
+<div><label class="label" for="printContrast">कॉन्ट्रास्ट <span id="printContrastValue">100%</span></label><input type="range" id="printContrast" min="50" max="160" value="100"></div>
+</div>
+</div>
+</div>
+
+<div class="toolpane" id="pdfPane">
+<div class="panel">
+<h3>PDF को 300 KB के करीब करें</h3>
+<div class="fields2">
+<div><label class="label" for="pdfFile">PDF चुनें</label><input id="pdfFile" type="file" accept="application/pdf"></div>
+<div><label class="label" for="pdfTarget">लक्ष्य KB</label><input type="number" id="pdfTarget" min="50" max="10000" value="300"></div>
+</div>
+<div class="btn-row" style="margin-top:12px">
+<button class="btn" id="compressPdf">PDF छोटा करें</button>
+<a id="pdfDownload" hidden class="btn green" download="chaahat-compressed.pdf">⬇ PDF डाउनलोड</a>
+</div>
+<div id="pdfStatus" class="status"></div>
+<p class="mini-note">फाइल छोटी करने पर गुणवत्ता घट सकती है। इंटरनेट चालू रखें।</p>
+</div>
+</div>
+
+</section>
+</div>
+
+<div class="site-page services-page" id="servicesPage">
+<section id="services">
+<div class="section-head"><div><h2>हमारी सेवाएँ</h2><p>सेवा पूछने के लिए WhatsApp पर क्लिक करें</p></div></div>
+<div class="grid" id="serviceGrid"></div>
+</section>
+
+<section id="contact">
+<div class="section-head"><div><h2>संपर्क</h2><p>एक क्लिक में WhatsApp चैट</p></div></div>
+<div class="contact">
+<div><h2>चाहत जनसेवा केंद्र</h2><p>मोबाइल: 8853846340</p></div>
+<a class="btn green" target="_blank" rel="noopener" href="https://wa.me/918853846340?text=नमस्ते%2C%20मुझे%20चाहत%20जनसेवा%20केंद्र%20से%20बात%20करनी%20है।">● WhatsApp पर मैसेज करें</a>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+
+<footer>© <span id="year"></span> चाहत जनसेवा केंद्र</footer>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js"></script>
+<script>
+// Local fallback cropper: keeps image cropping usable if the optional CropperJS CDN fails.
+if(!window.Cropper){
+window.Cropper=class BasicCropper{
+constructor(img,opts={}){
+this.img=img;this.opts=opts;this.ratio=Number.isFinite(opts.aspectRatio)?opts.aspectRatio:NaN;this.angle=0;this.parent=img.parentNode;this.next=img.nextSibling;this.wrap=document.createElement('div');this.wrap.className='basic-crop-wrap';this.sel=document.createElement('div');this.sel.className='basic-crop-selection';this.wrap.appendChild(img);this.wrap.appendChild(this.sel);this.parent.insertBefore(this.wrap,this.next);this.img.style.maxWidth='100%';this.img.style.maxHeight='100%';this.img.style.objectFit='contain';this.selBox=null;this.drag=null;this.initSelection();this.bind()
+}
+initSelection(){
+const r=this.img.getBoundingClientRect(),p=this.wrap.getBoundingClientRect();const w=Math.max(1,r.width),h=Math.max(1,r.height);let sw=w*.82,sh=h*.82;if(Number.isFinite(this.ratio)&&this.ratio>0){if(sw/sh>this.ratio)sw=sh*this.ratio;else sh=sw/this.ratio}this.selBox={x:(p.width-w)/2+(w-sw)/2,y:(p.height-h)/2+(h-sh)/2,w:sw,h:sh};this.draw()
+}
+draw(){if(!this.selBox)return;const b=this.selBox;Object.assign(this.sel.style,{left:b.x+'px',top:b.y+'px',width:b.w+'px',height:b.h+'px'})}
+bounds(){const wr=this.wrap.getBoundingClientRect(),ir=this.img.getBoundingClientRect();return{x:ir.left-wr.left,y:ir.top-wr.top,w:ir.width,h:ir.height}}
+bind(){
+const pos=e=>{const r=this.wrap.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}};
+this.down=e=>{e.preventDefault();const p=pos(e),b=this.bounds();if(p.x<b.x||p.x>b.x+b.w||p.y<b.y||p.y>b.y+b.h)return;this.drag={x:p.x,y:p.y};this.selBox={x:p.x,y:p.y,w:1,h:1};this.wrap.setPointerCapture?.(e.pointerId);this.draw()};
+this.move=e=>{if(!this.drag)return;const p=pos(e),b=this.bounds();let x=Math.max(b.x,Math.min(this.drag.x,p.x)),y=Math.max(b.y,Math.min(this.drag.y,p.y)),w=Math.max(2,Math.min(b.x+b.w,Math.max(this.drag.x,p.x))-x),h=Math.max(2,Math.min(b.y+b.h,Math.max(this.drag.y,p.y))-y);if(Number.isFinite(this.ratio)&&this.ratio>0){if(w/h>this.ratio)w=h*this.ratio;else h=w/this.ratio}this.selBox={x,y,w,h};this.draw()};
+this.up=()=>{this.drag=null};
+this.wrap.addEventListener('pointerdown',this.down);this.wrap.addEventListener('pointermove',this.move);this.wrap.addEventListener('pointerup',this.up);this.wrap.addEventListener('pointercancel',this.up)
+}
+setAspectRatio(r){this.ratio=Number.isFinite(r)&&r>0?r:NaN;this.initSelection()}
+rotate(deg){this.angle+=deg}
+rotateTo(deg){this.angle=deg}
+reset(){this.angle=0;this.initSelection()}
+getCroppedCanvas(options={}){
+const b=this.bounds(),s=this.selBox||{x:b.x,y:b.y,w:b.w,h:b.h};const sx=Math.max(0,(s.x-b.x)/b.w*this.img.naturalWidth),sy=Math.max(0,(s.y-b.y)/b.h*this.img.naturalHeight),sw=Math.max(1,s.w/b.w*this.img.naturalWidth),sh=Math.max(1,s.h/b.h*this.img.naturalHeight);let out=document.createElement('canvas');out.width=Math.max(1,Math.round(options.width||sw));out.height=Math.max(1,Math.round(options.height||sh));const ctx=out.getContext('2d');ctx.fillStyle=options.fillColor||'#fff';ctx.fillRect(0,0,out.width,out.height);ctx.drawImage(this.img,sx,sy,Math.min(sw,this.img.naturalWidth-sx),Math.min(sh,this.img.naturalHeight-sy),0,0,out.width,out.height);if(this.angle%360){const rad=this.angle*Math.PI/180,rot=document.createElement('canvas'),w=out.width,h=out.height;rot.width=Math.ceil(Math.abs(w*Math.cos(rad))+Math.abs(h*Math.sin(rad)));rot.height=Math.ceil(Math.abs(w*Math.sin(rad))+Math.abs(h*Math.cos(rad)));const rc=rot.getContext('2d');rc.fillStyle=options.fillColor||'#fff';rc.fillRect(0,0,rot.width,rot.height);rc.translate(rot.width/2,rot.height/2);rc.rotate(rad);rc.drawImage(out,-w/2,-h/2);out=rot}return out
+}
+destroy(){this.wrap.removeEventListener('pointerdown',this.down);this.wrap.removeEventListener('pointermove',this.move);this.wrap.removeEventListener('pointerup',this.up);this.wrap.removeEventListener('pointercancel',this.up);this.parent.insertBefore(this.img,this.wrap);this.wrap.remove();this.img.style.maxWidth='100%';this.img.style.maxHeight='100%'}
+}
+}
+</script>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+const PHONE='918853846340';
+document.getElementById('year').textContent=new Date().getFullYear();
+
+// Two-page navigation: swipe left for services, swipe right to return to tools
+const pageShell=document.getElementById('pageShell'),pageTrack=document.getElementById('pageTrack');
+let activePage='home',touchX=0,touchY=0;
+function showPage(which){
+activePage=which;
+pageTrack.classList.toggle('show-services',which==='services');
+pageTrack.style.transform=which==='services'?'translateX(-50%)':'translateX(0)';
+document.getElementById('dotHome').classList.toggle('active',which==='home');
+document.getElementById('dotServices').classList.toggle('active',which==='services');
+document.querySelectorAll('[data-page]').forEach(a=>a.classList.toggle('active',a.dataset.page===which));
+document.querySelectorAll('nav a[data-page]').forEach(a=>a.setAttribute('aria-current',a.dataset.page===which?'page':'false'));
+window.scrollTo({top:0,behavior:'smooth'});
+history.replaceState(null,'',which==='services'?'#services':'#home')
+}
+document.querySelectorAll('[data-page]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();showPage(a.dataset.page)}));
+pageShell.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX;touchY=e.changedTouches[0].clientY},{passive:true});
+pageShell.addEventListener('touchend',e=>{const target=e.target;if(target.closest('.cropper-container,.basic-crop-wrap,input,button,a,select,textarea'))return;const dx=e.changedTouches[0].clientX-touchX,dy=e.changedTouches[0].clientY-touchY;if(Math.abs(dx)>55&&Math.abs(dx)>Math.abs(dy)*1.2)showPage(dx<0?'services':'home')},{passive:true});
+pageShell.addEventListener('click',e=>{const hit=e.target.closest('[data-go-services]');if(hit)showPage('services')});
+if(location.hash==='#services')showPage('services');else showPage('home');
+
+const services=[
+['🧾','आय प्रमाण पत्र','₹100'],
+['📄','जाति प्रमाण पत्र','₹100'],
+['🏠','निवास प्रमाण पत्र','₹100'],
+['🪪','आधार कार्ड प्रिंट','WhatsApp'],
+['🪪','पैन कार्ड','₹200'],
+['🗳️','वोटर कार्ड','₹100'],
+['👷','ई-श्रम कार्ड','₹100'],
+['🦺','श्रमिक कार्ड','WhatsApp'],
+['🍚','राशन कार्ड सहायता','WhatsApp'],
+['🪪','आधार PVC कार्ड','आगामी'],
+['🪪','PVC कार्ड सेवाएँ','आगामी'],
+['🖼️','फोटो / सिग्नेचर','₹20'],
+['📑','PDF / JPG साइज','₹20']
+];
+document.getElementById('serviceGrid').innerHTML=services.map(s=>{
+const upcoming=s[2]==='आगामी';
+return `<article class="card"><div class="ico">${s[0]}</div><h3>${s[1]}</h3><p>${upcoming?'जल्द उपलब्ध होगी':'सहायता और जानकारी के लिए संपर्क करें'}</p><div class="price">${s[2]==='WhatsApp'?'पूछें':s[2]}</div>${upcoming?'<span class="btn gold" style="width:100%;cursor:default">◷ आगामी सेवा</span>':`<a class="btn green" target="_blank" rel="noopener" href="https://wa.me/${PHONE}?text=${encodeURIComponent('नमस्ते, मुझे '+s[1]+' सेवा के बारे में जानकारी चाहिए।')}">● WhatsApp</a>`}</article>`
+}).join('');
+
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{
+document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));
+document.querySelectorAll('.toolpane').forEach(x=>x.classList.toggle('active',x.id===b.dataset.tab))
+}));
+
+let cropper=null,imageUrl=null,freeMode=false;
+const cropImage=document.getElementById('cropImage');
+const cropEmpty=document.getElementById('cropEmpty');
+const presets={
+photo:{kb:50,w:2.5,h:3.5},
+document:{kb:100,w:0,h:0},
+panphoto:{kb:50,w:2.5,h:3.5},
+signature:{kb:50,w:4.5,h:2},
+ration:{kb:100,w:0,h:0},
+manual:{kb:50,w:0,h:0}
+};
+function ratioValue(){
+const w=Number(document.getElementById('cropW').value),h=Number(document.getElementById('cropH').value);
+return w>0&&h>0?w/h:NaN
+}
+function updateRatio(){if(cropper)cropper.setAspectRatio(freeMode?NaN:ratioValue())}
+document.querySelectorAll('[data-preset]').forEach(b=>b.addEventListener('click',()=>{
+document.querySelectorAll('[data-preset]').forEach(x=>x.classList.toggle('active',x===b));
+const p=presets[b.dataset.preset];
+document.getElementById('targetKb').value=p.kb;
+document.getElementById('cropW').value=p.w||'';
+document.getElementById('cropH').value=p.h||'';
+freeMode=b.dataset.preset==='manual'||!p.w;
+updateRatio()
+}));
+document.getElementById('quality').addEventListener('input',e=>document.getElementById('qualityValue').textContent=e.target.value+'%');
+['brightness','contrast'].forEach(id=>document.getElementById(id).addEventListener('input',e=>{
+document.getElementById(id+'Value').textContent=e.target.value+'%';
+cropImage.style.filter=`brightness(${document.getElementById('brightness').value}%) contrast(${document.getElementById('contrast').value}%)`;
+}));
+function filterCanvas(source,bri,con){
+const c=document.createElement('canvas');c.width=source.width;c.height=source.height;
+const x=c.getContext('2d');x.filter=`brightness(${bri}%) contrast(${con}%)`;x.drawImage(source,0,0);x.filter='none';return c
+}
+document.getElementById('cropW').addEventListener('change',()=>{freeMode=false;updateRatio()});
+document.getElementById('cropH').addEventListener('change',()=>{freeMode=false;updateRatio()});
+document.getElementById('freeCrop').onclick=()=>{freeMode=true;updateRatio()};
+document.getElementById('applyRatio').onclick=()=>{freeMode=false;updateRatio()};
+
+document.getElementById('imageFile').addEventListener('change',e=>{
+const f=e.target.files[0];if(!f)return;
+if(cropper){cropper.destroy();cropper=null}
+if(imageUrl)URL.revokeObjectURL(imageUrl);
+imageUrl=URL.createObjectURL(f);
+document.getElementById('cropAngle').value=0;
+document.getElementById('cropAngleValue').textContent='0°';
+cropImage.onload=()=>{
+cropImage.hidden=false;cropEmpty.hidden=true;
+try{
+cropper=new window.Cropper(cropImage,{viewMode:1,autoCropArea:.88,background:false,responsive:true,zoomable:true,rotatable:true,movable:true,aspectRatio:freeMode?NaN:ratioValue()});
+document.getElementById('imageStatus').textContent='फोटो लोड हो गई — बॉक्स खींचकर क्रॉप करें।'
+}catch(err){
+document.getElementById('imageStatus').textContent='क्रॉप टूल शुरू नहीं हो पाया। पेज रीफ्रेश करके फिर चुनें।';
+document.getElementById('imageStatus').className='status bad'
+}
+};
+cropImage.onerror=()=>{
+document.getElementById('imageStatus').textContent='यह इमेज खुल नहीं रही। JPG/PNG फोटो चुनें।';
+document.getElementById('imageStatus').className='status bad'
+};
+cropImage.src=imageUrl;
+document.getElementById('imageStatus').textContent='अब क्रॉप बॉक्स खींचकर सेट करें।'
+});
+
+document.getElementById('rotateLeft').onclick=()=>cropper&&cropper.rotate(-90);
+document.getElementById('rotateRight').onclick=()=>cropper&&cropper.rotate(90);
+document.getElementById('cropAngle').addEventListener('input',e=>{
+document.getElementById('cropAngleValue').textContent=e.target.value+'°';
+if(cropper)cropper.rotateTo(Number(e.target.value))
+});
+document.getElementById('resetCrop').onclick=()=>{
+if(cropper)cropper.reset();
+document.getElementById('cropAngle').value=0;
+document.getElementById('cropAngleValue').textContent='0°'
+};
+
+async function compressCanvas(canvas,target,q){
+let blob=null;
+for(let scale=1;scale>=.25;scale*=.82){
+const c=document.createElement('canvas');
+c.width=Math.max(1,Math.round(canvas.width*scale));
+c.height=Math.max(1,Math.round(canvas.height*scale));
+c.getContext('2d').drawImage(canvas,0,0,c.width,c.height);
+let lo=.12,hi=q,best=null;
+for(let i=0;i<10;i++){
+const mid=(lo+hi)/2,b=await new Promise(r=>c.toBlob(r,'image/jpeg',mid));
+if(!b)break;
+if(b.size<=target){best=b;lo=mid}else hi=mid
+}
+blob=best||await new Promise(r=>c.toBlob(r,'image/jpeg',.3));
+if(blob.size<=target)break
+}
+return blob
+}
+
+document.getElementById('makeImage').onclick=async()=>{
+const status=document.getElementById('imageStatus'),link=document.getElementById('imageDownload');
+link.hidden=true;
+if(!cropper){status.textContent='पहले फोटो / डॉक्यूमेंट चुनें।';status.className='status bad';return}
+const kb=Number(document.getElementById('targetKb').value),q=Number(document.getElementById('quality').value)/100;
+if(!kb||kb<1){status.textContent='सही KB लिखें।';return}
+try{
+status.textContent='फाइल बन रही है…';
+const cw=Number(document.getElementById('cropW').value),ch=Number(document.getElementById('cropH').value);
+const dims=(!freeMode&&cw>0&&ch>0)?{width:Math.round(cw*118.11),height:Math.round(ch*118.11)}:{};
+const c=cropper.getCroppedCanvas({...dims,maxWidth:3000,maxHeight:3000,fillColor:'#fff'});
+const filtered=filterCanvas(c,Number(document.getElementById('brightness').value),Number(document.getElementById('contrast').value));
+const blob=await compressCanvas(filtered,kb*1024,q);
+link.href=URL.createObjectURL(blob);
+link.hidden=false;
+link.download='chaahat-'+Math.round(kb)+'kb.jpg';
+status.textContent=`तैयार: ${(blob.size/1024).toFixed(1)} KB • ${c.width} × ${c.height} px`+(blob.size>kb*1024?' — लक्ष्य KB तक नहीं पहुँचा; KB/क्वालिटी कम करें।':'');
+status.className='status '+(blob.size<=kb*1024?'good':'bad')
+}catch(e){
+status.textContent='इमेज नहीं बन पाई। दूसरी फाइल आज़माएँ।';
+status.className='status bad'
+}
+};
+
+// A4 and ID-card print tool
+let printCropper=null,printObjectUrl=null,printActive='front',frontData=null,backData=null;
+const printCropImage=document.getElementById('printCropImage');
+
+function loadPrintCrop(side){
+const file=document.getElementById(side==='front'?'frontFile':'backFile').files[0];
+if(!file){document.getElementById('cropStatus').textContent='पहले '+(side==='front'?'फ्रंट':'बैक')+' इमेज चुनें।';return}
+if(printCropper){printCropper.destroy();printCropper=null}
+if(printObjectUrl)URL.revokeObjectURL(printObjectUrl);
+printObjectUrl=URL.createObjectURL(file);
+printActive=side;
+document.getElementById('printAngle').value=0;
+document.getElementById('printAngleValue').textContent='0°';
+printCropImage.onload=()=>{
+printCropImage.hidden=false;
+document.getElementById('printCropEmpty').hidden=true;
+try{
+printCropper=new window.Cropper(printCropImage,{viewMode:1,autoCropArea:.9,background:false,responsive:true,zoomable:true,rotatable:true,movable:true,aspectRatio:document.getElementById('printMode').value==='card'?85.6/54:NaN});
+const d=dataFromCrop();
+if(side==='front')frontData=d;else backData=d;
+refreshPrint();
+document.getElementById('cropStatus').textContent=(side==='front'?'फ्रंट':'बैक')+' ऑटो-क्रॉप तैयार। चाहें तो बॉक्स, चमक और कॉन्ट्रास्ट बदलकर लागू करें।';
+document.getElementById('cropStatus').className='status good'
+}catch(err){
+document.getElementById('cropStatus').textContent='क्रॉप टूल शुरू नहीं हुआ। पेज रीफ्रेश करके दोबारा इमेज चुनें।';
+document.getElementById('cropStatus').className='status bad'
+}
+};
+printCropImage.onerror=()=>{
+document.getElementById('cropStatus').textContent='इमेज लोड नहीं हुई। WhatsApp से मिली इमेज को पहले फोन में सेव करके JPG/PNG चुनें।';
+document.getElementById('cropStatus').className='status bad'
+};
+printCropImage.src=printObjectUrl;
+document.getElementById('cropStatus').textContent='इमेज लोड हो रही है…'
+}
+
+document.getElementById('loadFront').onclick=()=>loadPrintCrop('front');
+document.getElementById('loadBack').onclick=()=>loadPrintCrop('back');
+document.getElementById('frontFile').addEventListener('change',()=>loadPrintCrop('front'));
+document.getElementById('backFile').addEventListener('change',()=>loadPrintCrop('back'));
+document.getElementById('printMode').addEventListener('change',()=>{
+if(printCropper)printCropper.setAspectRatio(document.getElementById('printMode').value==='card'?85.6/54:NaN);
+document.getElementById('frontSlot').hidden=document.getElementById('printMode').value==='a4';
+document.getElementById('backSlot').hidden=document.getElementById('printMode').value==='a4';
+document.getElementById('singleSlot').hidden=document.getElementById('printMode').value!=='a4';
+refreshPrint()
+});
+
+document.getElementById('printRotateLeft').onclick=()=>printCropper&&printCropper.rotate(-90);
+document.getElementById('printRotateRight').onclick=()=>printCropper&&printCropper.rotate(90);
+['printBrightness','printContrast'].forEach(id=>document.getElementById(id).addEventListener('input',e=>{
+document.getElementById(id+'Value').textContent=e.target.value+'%';
+printCropImage.style.filter=`brightness(${document.getElementById('printBrightness').value}%) contrast(${document.getElementById('printContrast').value}%)`;
+}));
+document.getElementById('printAngle').addEventListener('input',e=>{
+document.getElementById('printAngleValue').textContent=e.target.value+'°';
+if(printCropper)printCropper.rotateTo(Number(e.target.value))
+});
+
+function dataFromCrop(){
+if(!printCropper)return null;
+const c=printCropper.getCroppedCanvas({maxWidth:2500,maxHeight:2500,fillColor:'#fff'});
+return filterCanvas(c,Number(document.getElementById('printBrightness').value),Number(document.getElementById('printContrast').value)).toDataURL('image/jpeg',.94)
+}
+function setCardSlot(id,data,label){
+const el=document.getElementById(id);el.innerHTML='';
+if(data){const im=document.createElement('img');im.src=data;im.alt=label;el.appendChild(im)}
+else el.textContent=label
+}
+function refreshPrint(){
+setCardSlot('frontSlot',frontData,'फ्रंट');
+setCardSlot('backSlot',backData,'बैक');
+const mode=document.getElementById('printMode').value,single=document.getElementById('singleSlot');
+single.innerHTML='';
+if(mode==='a4'){
+const d=frontData||backData;
+if(d){const im=document.createElement('img');im.src=d;im.alt='A4 डॉक्यूमेंट';single.appendChild(im)}
+}
+document.getElementById('printActions').hidden=mode==='a4'?!(frontData||backData):!(frontData&&backData)
+}
+
+document.getElementById('cropFront').onclick=()=>{
+if(printActive!=='front'||!printCropper){document.getElementById('cropStatus').textContent='पहले फ्रंट क्रॉप खोलें।';return}
+frontData=dataFromCrop();refreshPrint();document.getElementById('cropStatus').textContent='फ्रंट प्रीव्यू में तैयार है।'
+};
+document.getElementById('cropBack').onclick=()=>{
+if(printActive!=='back'||!printCropper){document.getElementById('cropStatus').textContent='पहले बैक क्रॉप खोलें।';return}
+backData=dataFromCrop();refreshPrint();document.getElementById('cropStatus').textContent='बैक प्रीव्यू में तैयार है।'
+};
+
+document.getElementById('printBtn').onclick=()=>{
+if(document.getElementById('printMode').value==='card'&&(!frontData||!backData)){alert('पहले फ्रंट और बैक दोनों इमेज चुनकर क्रॉप करें।');return}
+if(!frontData&&!backData){alert('पहले इमेज क्रॉप करें।');return}
+window.print()
+};
+
+document.getElementById('downloadCardsPdf').onclick=()=>{
+if(document.getElementById('printMode').value==='card'&&(!frontData||!backData)){alert('पहले फ्रंट और बैक दोनों इमेज चुनकर क्रॉप करें।');return}
+if(!frontData&&!backData){alert('पहले इमेज क्रॉप करें।');return}
+if(!window.jspdf){alert('PDF सुविधा के लिए इंटरनेट चालू रखें।');return}
+const {jsPDF}=window.jspdf,doc=new jsPDF({orientation:'p',unit:'mm',format:'a4',compress:true});
+if(document.getElementById('printMode').value==='a4'){
+const d=frontData||backData;
+if(d)doc.addImage(d,'JPEG',0,0,210,297,'full','FAST')
+}else{
+if(frontData)doc.addImage(frontData,'JPEG',15,20,85.6,54,'front','FAST');
+if(backData)doc.addImage(backData,'JPEG',110,20,85.6,54,'back','FAST')
+}
+doc.save('chaahat-a4-print.pdf')
+};
+
+document.getElementById('downloadCardsJpg').onclick=()=>{
+if(document.getElementById('printMode').value==='card'&&(!frontData||!backData)){alert('पहले फ्रंट और बैक दोनों इमेज चुनकर क्रॉप करें।');return}
+if(!frontData&&!backData){alert('पहले फ्रंट या बैक क्रॉप करें।');return}
+const c=document.createElement('canvas');c.width=2480;c.height=3508;
+const ctx=c.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,c.width,c.height);
+if(document.getElementById('printMode').value==='a4'){
+const d=frontData||backData;
+if(d){
+const im=new Image();
+im.onload=()=>{
+ctx.drawImage(im,0,0,c.width,c.height);
+c.toBlob(b=>{
+const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='chaahat-a4-document.jpg';a.click()
+},'image/jpeg',.94)
+};
+im.src=d
+}
+}else{
+let count=(frontData?1:0)+(backData?1:0),done=0;
+const finish=()=>{
+done++;
+if(done===count)c.toBlob(b=>{
+const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='chaahat-a4-card.jpg';a.click()
+},'image/jpeg',.94)
+};
+[[frontData,177,236],[backData,1299,236]].forEach(([d,x,y])=>{
+if(!d)return;
+const im=new Image();
+im.onload=()=>{ctx.drawImage(im,x,y,1012,638);finish()};
+im.src=d
+})
+}
+};
+
+document.getElementById('downloadCardsPng').onclick=()=>{
+if(document.getElementById('printMode').value==='card'&&(!frontData||!backData)){alert('पहले फ्रंट और बैक दोनों इमेज चुनकर क्रॉप करें।');return}
+if(!frontData&&!backData){alert('पहले इमेज चुनें।');return}
+const c=document.createElement('canvas');c.width=2480;c.height=3508;
+const ctx=c.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,c.width,c.height);
+const items=document.getElementById('printMode').value==='a4'?[[frontData||backData,0,0,c.width,c.height]]:[[frontData,177,236,1012,638],[backData,1299,236,1012,638]].filter(x=>x[0]);
+let done=0;
+items.forEach(([d,x,y,w,h])=>{
+const im=new Image();
+im.onload=()=>{
+ctx.drawImage(im,x,y,w,h);done++;
+if(done===items.length)c.toBlob(b=>{
+if(!b){alert('PNG नहीं बन पाई।');return}
+const u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='chaahat-a4-print.png';a.click();setTimeout(()=>URL.revokeObjectURL(u),1500)
+},'image/png')
+};
+im.onerror=()=>alert('इमेज PNG में नहीं बन पाई।');
+im.src=d
+})
+};
+
+document.getElementById('clearCards').onclick=()=>{
+frontData=backData=null;
+document.getElementById('frontFile').value='';
+document.getElementById('backFile').value='';
+if(printCropper){printCropper.destroy();printCropper=null}
+printCropImage.hidden=true;
+document.getElementById('printCropEmpty').hidden=false;
+document.getElementById('cropStatus').textContent='रीसेट हो गया।';
+refreshPrint()
+};
+
+// PDF compressor
+if(window.pdfjsLib)pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+refreshPrint();
+
+document.getElementById('compressPdf').onclick=async()=>{
+if(window.pdfjsLib)pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+const f=document.getElementById('pdfFile').files[0],status=document.getElementById('pdfStatus'),link=document.getElementById('pdfDownload');
+link.hidden=true;
+if(!f){status.textContent='पहले PDF चुनें।';return}
+if(!window.pdfjsLib||!window.jspdf){status.textContent='लाइब्रेरी लोड नहीं हुई — इंटरनेट चालू करें।';return}
+const target=Number(document.getElementById('pdfTarget').value)*1024;
+try{
+status.textContent='PDF बन रही है…';
+const pdf=await pdfjsLib.getDocument({data:await f.arrayBuffer()}).promise,{jsPDF}=window.jspdf;
+let out;
+for(const q of [.55,.4,.28,.18]){
+const doc=new jsPDF({orientation:'p',unit:'pt',format:'a4',compress:true});
+for(let n=1;n<=pdf.numPages;n++){
+const page=await pdf.getPage(n),v=page.getViewport({scale:1.1}),c=document.createElement('canvas');
+c.width=Math.ceil(v.width);c.height=Math.ceil(v.height);
+await page.render({canvasContext:c.getContext('2d'),viewport:v}).promise;
+if(n>1)doc.addPage('a4','p');
+doc.addImage(c.toDataURL('image/jpeg',q),'JPEG',0,0,doc.internal.pageSize.getWidth(),doc.internal.pageSize.getHeight(),undefined,'FAST');
+c.width=c.height=1
+}
+out=doc.output('blob');
+if(out.size<=target)break
+}
+link.href=URL.createObjectURL(out);
+link.hidden=false;
+status.textContent=`तैयार: ${(out.size/1024).toFixed(1)} KB`+(out.size>target?' — लक्ष्य तक नहीं पहुँचा।':'');
+status.className='status '+(out.size<=target?'good':'bad')
+}catch(e){
+status.textContent='PDF प्रोसेस नहीं हुई। दूसरी PDF आज़माएँ।';
+status.className='status bad'
+}
+};
+</script>
+</body>
+</html>
