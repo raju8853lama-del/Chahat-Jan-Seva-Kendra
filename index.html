@@ -75,7 +75,7 @@ input[type=range]{width:100%;accent-color:var(--blue)}
 .print-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:13px}
 .a4-preview{width:100%;aspect-ratio:210/297;max-height:620px;background:white;border:1px solid #cbd5e1;border-radius:4px;box-shadow:0 7px 25px #152d5518;position:relative;overflow:hidden}
 .a4-label{position:absolute;top:4%;width:100%;text-align:center;color:#8995a8;font-size:10px}
-/* --- 1. लेआउट: बायाँ पैनल और दायाँ A4 प्रीव्यू बॉक्स --- */
+/* --- 1. मुख्य लेआउट: बायाँ पैनल और दायाँ A4 प्रीव्यू --- */
 .print-layout {
     display: grid !important;
     grid-template-columns: 320px 1fr !important;
@@ -85,41 +85,49 @@ input[type=range]{width:100%;accent-color:var(--blue)}
     box-sizing: border-box !important;
 }
 
-/* --- 2. स्क्रीन पर A4 प्रीव्यू बॉक्स (सही A4 साइज रेश्यो) --- */
+/* --- 2. स्क्रीन पर A4 प्रीव्यू बॉक्स (सही A4 रेश्यो और कॉम्पैक्ट साइज़) --- */
 .a4-preview {
     width: 100% !important;
-    max-width: 700px !important;
+    max-width: 550px !important;
     aspect-ratio: 210 / 297 !important;
     background: #ffffff !important;
-    border: 1px solid #d1d5db !important;
-    padding: 15px !important;
+    border: 2px solid #cbd5e1 !important;
+    padding: 8mm !important;
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: wrap !important;
     justify-content: flex-start !important;
     align-items: flex-start !important;
-    gap: 10mm !important;
+    gap: 6mm !important;
+    position: relative !important;
     overflow: hidden !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* --- 3. आधार कार्ड का सही माप (8.5cm x 5.5cm) और फ्री-रिसाइज --- */
+/* --- 3. आधार कार्ड स्लॉट (फ्रंट और बैक के लिए) --- */
 .card-slot {
     width: 8.5cm !important;
     height: 5.5cm !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
     resize: both !important;
     overflow: hidden !important;
-    aspect-ratio: unset !important;
     flex-shrink: 0 !important;
+    background: #f8fafc !important;
+    border: 1px dashed #94a3b8 !important;
 }
 
 .card-slot img {
     width: 100% !important;
     height: 100% !important;
     object-fit: fill !important;
+    display: block !important;
 }
 
-/* --- 4. प्रिंट सेटिंग: सिर्फ 1 सिंगल A4 पेज और अगल-बगल कार्ड --- */
+/* --- 4. प्रिंट सेटिंग: केवल 1 सिंगल A4 पेज और आमने-सामने कार्ड --- */
 @media print {
     @page {
         size: A4 portrait;
@@ -145,7 +153,8 @@ input[type=range]{width:100%;accent-color:var(--blue)}
         width: 210mm !important;
         height: 297mm !important;
         border: none !important;
-        padding: 15mm !important;
+        box-shadow: none !important;
+        padding: 10mm !important;
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
@@ -155,13 +164,13 @@ input[type=range]{width:100%;accent-color:var(--blue)}
         page-break-after: avoid !important;
         page-break-before: avoid !important;
         page-break-inside: avoid !important;
-        break-after: avoid !important;
-        break-inside: avoid !important;
     }
 
     .card-slot {
         width: 8.5cm !important;
         height: 5.5cm !important;
+        border: none !important;
+        background: transparent !important;
         page-break-after: avoid !important;
         page-break-inside: avoid !important;
     }
