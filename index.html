@@ -204,6 +204,52 @@ body *{visibility:hidden!important}
 #printArea .print-single img{width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain!important}
 nav,header,footer{display:none!important}
 }
+   @media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  .a4-preview {
+    position: relative !important;
+    width: 210mm !important;
+    height: 297mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    page-break-after: avoid !important;
+    break-after: avoid-page !important;
+  }
+
+  .card-slot.front,
+  .card-slot.back {
+    position: absolute !important;
+    width: 85mm !important;
+    height: 55mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .card-slot.front {
+    left: 15mm !important;
+    top: 20mm !important;
+  }
+
+  .card-slot.back {
+    left: 110mm !important;
+    top: 20mm !important;
+  }
+
+  .card-slot img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+} 
 </style>
 
 <script type="application/ld+json">
