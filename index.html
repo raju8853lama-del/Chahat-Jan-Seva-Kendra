@@ -914,28 +914,25 @@ status.className='status bad'
 </script>
 </body>
 </html>
-/* --- आपकी फोटो के हिसाब से परफेक्ट A4 और कार्ड सेटिंग्स (सबसे नीचे जोड़ें) --- */
-
-/* 1. दाहिना A4 प्रीव्यू बॉक्स (जिसमें कार्ड ऊपर और आमने-सामने दिखेंगे) */
+/* --- A4 पेज पर कार्ड्स को ऊपर बीच में सेट करने का फाइनल अचूक कोड --- */
 .a4-preview, #printArea {
     width: 100% !important;
     max-width: 600px !important;
     aspect-ratio: 210 / 297 !important;
     background: #ffffff !important;
     border: 2px solid #cbd5e1 !important;
-    padding: 10mm 8mm !important;
+    padding: 10mm 15mm !important;
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
-    justify-content: flex-start !important;
+    justify-content: center !important;
     align-items: flex-start !important;
     gap: 6mm !important;
     position: relative !important;
     overflow: hidden !important;
 }
 
-/* 2. आधार कार्ड का सही माप (8.5cm x 5.5cm) */
 .card-slot {
     width: 8.5cm !important;
     height: 5.5cm !important;
@@ -953,7 +950,7 @@ status.className='status bad'
     display: block !important;
 }
 
-/* 3. प्रिंट कमांड देते ही सिर्फ 1 सिंगल A4 पेज पर प्रिंट हो */
+/* --- प्रिंट सेटिंग: सिंगल पेज और बिना किसी फालतू पेज के --- */
 @media print {
     @page {
         size: A4 portrait;
@@ -983,19 +980,24 @@ status.className='status bad'
         width: 210mm !important;
         height: 297mm !important;
         border: none !important;
-        padding: 12mm 10mm !important;
+        padding: 10mm 15mm !important;
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
-        justify-content: flex-start !important;
+        justify-content: center !important;
         align-items: flex-start !important;
         gap: 8mm !important;
         background: #ffffff !important;
+        page-break-after: avoid !important;
+        page-break-before: avoid !important;
+        page-break-inside: avoid !important;
     }
 
     .card-slot {
         width: 8.5cm !important;
         height: 5.5cm !important;
+        page-break-after: avoid !important;
         page-break-inside: avoid !important;
     }
 }
+
