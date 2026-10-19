@@ -917,7 +917,7 @@ status.className='status bad'
     position: absolute;
     top: 12px;
     right: 12px;
-    width: 100px;
+    width: 101px;
     height: 145px;
     object-fit: contain;
     object-position: center;
@@ -939,7 +939,7 @@ status.className='status bad'
 
 <img
   class="raju-profile"
-  src="raju-profile.png"
+  src="raju-profile.jpg"
   alt="जन सेवा केंद्र संचालक"
 />
 </body>
