@@ -1065,11 +1065,42 @@ status.className='status bad'
   alt="जन सेवा केंद्र संचालक"
 />
 </body>
-<div class="site-zoom-controls" role="group" aria-label="वेबसाइट ज़ूम कंट्रोल">
-  <button type="button" id="zoomOut">−</button>
-  <span id="zoomPercent">100%</span>
-  <button type="button" id="zoomIn">+</button>
-  <button type="button" id="zoomReset">रीसेट</button>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const zoomIn = document.getElementById("zoomIn");
+  const zoomOut = document.getElementById("zoomOut");
+  const zoomReset = document.getElementById("zoomReset");
+  const zoomPercent = document.getElementById("zoomPercent");
+
+  let zoom = 100;
+
+  function applyZoom() {
+    document.documentElement.style.zoom = zoom + "%";
+    zoomPercent.textContent = zoom + "%";
+  }
+
+  if (!zoomIn || !zoomOut || !zoomReset || !zoomPercent) {
+    return;
+  }
+
+  zoomIn.addEventListener("click", function () {
+    zoom = Math.min(150, zoom + 10);
+    applyZoom();
+  });
+
+  zoomOut.addEventListener("click", function () {
+    zoom = Math.max(70, zoom - 10);
+    applyZoom();
+  });
+
+  zoomReset.addEventListener("click", function () {
+    zoom = 100;
+    applyZoom();
+  });
+
+  applyZoom();
+});
+</script>
 </div>
 </html>
 
