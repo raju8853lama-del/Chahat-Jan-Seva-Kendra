@@ -276,6 +276,127 @@ header{padding-top:15px;padding-bottom:15px}
     display: none !important;
   }
 }
+/* वेबसाइट Zoom Controls */
+.site-zoom-controls {
+  position: fixed;
+  right: 12px;
+  bottom: 18px;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px;
+  background: #fff;
+  border: 1px solid #d7e2f3;
+  border-radius: 14px;
+  box-shadow: 0 6px 22px #10264a30;
+}
+
+.site-zoom-controls button {
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 10px;
+  background: #225de6;
+  color: white;
+  font-size: 23px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.site-zoom-controls .zoom-reset {
+  width: auto;
+  padding: 0 10px;
+  font-size: 12px;
+  background: #eaf0ff;
+  color: #1d3f94;
+}
+
+#zoomPercent {
+  min-width: 44px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: #12233e;
+}
+
+@media (max-width: 420px) {
+  .site-zoom-controls {
+    right: 8px;
+    bottom: 10px;
+    gap: 4px;
+    padding: 5px;
+  }
+
+  .site-zoom-controls button {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media print {
+  .site-zoom-controls {
+    display: none !important;
+  }
+
+  html {
+    zoom: 1 !important;
+  }
+}
+/* वेबसाइट Zoom Controls */
+.site-zoom-controls {
+  position: fixed;
+  right: 12px;
+  bottom: 18px;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px;
+  background: #fff;
+  border: 1px solid #d7e2f3;
+  border-radius: 14px;
+  box-shadow: 0 6px 22px #10264a30;
+}
+
+.site-zoom-controls button {
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 10px;
+  background: #225de6;
+  color: white;
+  font-size: 23px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.site-zoom-controls .zoom-reset {
+  width: auto;
+  padding: 0 10px;
+  font-size: 12px;
+  background: #eaf0ff;
+  color: #1d3f94;
+}
+
+#zoomPercent {
+  min-width: 44px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: #12233e;
+}
+
+@media (max-width: 420px) {
+  .site-zoom-controls {
+    right: 8px;
+    bottom: 10px;
+    gap: 4px;
+    padding: 5px;
+  }
+    
+  }
+}
 </style>
 
 <script type="application/ld+json">
@@ -944,5 +1065,12 @@ status.className='status bad'
   alt="जन सेवा केंद्र संचालक"
 />
 </body>
+<div class="site-zoom-controls" role="group" aria-label="वेबसाइट ज़ूम कंट्रोल">
+  <button type="button" id="zoomOut">−</button>
+  <span id="zoomPercent">100%</span>
+  <button type="button" id="zoomIn">+</button>
+  <button type="button" id="zoomReset">रीसेट</button>
+</div>
 </html>
+
 
