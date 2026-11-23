@@ -412,7 +412,7 @@ header{padding-top:15px;padding-bottom:15px}
 }
 /* स्क्रीन पर A4 प्रीव्यू फ़िक्स (प्रिंट पर कोई असर नहीं) */
 @media screen{
-  .a4-preview{
+  #printArea{
     width:100%!important;
     max-width:380px!important;
     height:auto!important;
@@ -426,7 +426,7 @@ header{padding-top:15px;padding-bottom:15px}
     border:1px solid #cbd5e1!important;
     box-shadow:0 7px 25px #152d5518!important;
   }
-  .a4-preview .card-slot{
+  #printArea .card-slot{
     position:absolute!important;
     top:6.7%!important;
     width:40.5%!important;
@@ -436,8 +436,8 @@ header{padding-top:15px;padding-bottom:15px}
     flex:none!important;
     aspect-ratio:auto!important;
   }
-  .a4-preview .card-slot.front{left:7.1%!important}
-  .a4-preview .card-slot.back{left:52.4%!important}
+  #printArea .card-slot.front{left:7.1%!important}
+  #printArea .card-slot.back{left:52.4%!important}
 }    
 </style>
 
