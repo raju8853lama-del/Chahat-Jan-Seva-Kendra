@@ -397,6 +397,19 @@ header{padding-top:15px;padding-bottom:15px}
     
   }
 }
+/* प्रिंट फ़िक्स */
+@media print{
+  html,body{width:210mm!important;height:297mm!important;margin:0!important;padding:0!important;overflow:hidden!important}
+  main{max-width:none!important;margin:0!important;padding:0!important}
+  .page-shell{width:210mm!important;overflow:visible!important}
+  .page-track{display:block!important;width:210mm!important;transform:none!important;transition:none!important;will-change:auto!important}
+  .site-page{width:210mm!important;max-width:210mm!important}
+  .services-page{display:none!important}
+  #printArea{max-width:none!important;aspect-ratio:auto!important}
+  #printArea .card-slot{width:85mm!important;height:55mm!important;min-width:0!important;max-width:none!important;aspect-ratio:auto!important}
+  #printArea .card-slot.front{left:15mm!important;top:20mm!important}
+  #printArea .card-slot.back{left:110mm!important;top:20mm!important}
+}    
 </style>
 
 <script type="application/ld+json">
